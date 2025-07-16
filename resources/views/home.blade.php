@@ -143,71 +143,35 @@
     </div>
     <!-- News End -->
 
-
-    <!-- About Start -->
-    <div class="container-fluid overflow-hidden py-5 px-lg-0">
-        <div class="container about py-5 px-lg-0">
-            <div class="row g-5 mx-lg-0">
-                <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/about.jpg" style="object-fit: cover;" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-6 about-text wow fadeInUp" data-wow-delay="0.3s">
-                    <h6 class="text-dark text-uppercase mb-3">About Us</h6>
-                    <h1 class="mb-5">WELCOME TO BETA LOGISTICS</h1>
-                    <p class="mb-3">
-                        As international freight forwarders, our mission is
-                        to provide world-class logistic service to exporters
-                        and importers. We treat each shipment as a unique
-                        challenge and opportunity, identifying and providing
-                        the optimal solution for our customers specific
-                        international transportation needs
-                    </p>
-                    <p class="mb-3">
-                        At BETA, we are aware of the critical importance of
-                        each shipment and how much it could mean to the
-                        daily operations of your business. We bear in mind
-                        the gravity of trust you place in us and strive to move
-                        your cargo swiftly and efficiently straight to the
-                        destination
-                    </p>
-                    <p class="mb-3">
-                        Our upskilled team of professionals uses the best
-                        resources and the latest technologies to transport
-                        your shipment across the globe carefully, and
-                        consistently
-                    </p>
-
-                    <a href="/about" class="btn btn-dark rounded-1 py-3 px-5">Explore More</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- About End -->
-
-
     <!-- Fact Start -->
     <div class="container-xxl py-5">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="text-dark text-uppercase mb-3">Some Facts</h6>
-                    <h1 class="mb-5">OUR TARGET IS TO MAKE YOUR DEALINGS SMOOTHER.</h1>
+                    <h2 class="mb-5 h1">Global Freight Forwarding & Logistics Solutions You Can Trust</h2>
                     <p class="mb-3">
-                        We pride ourselves on providing the best transport and shipping
-                        services available all over the world
+                        At BETA FZE Logistics, we specialize in providing reliable, cost-effective, and tailor-made
+                        international freight forwarding and cargo transportation services. Whether you're importing or
+                        exporting, our end-to-end logistics solutions are designed to meet your business goals with
+                        precision and speed.
                     </p>
                     <p class="mb-3">
-                        Our skilled personnel, utilising the latest communications,
-                        tracking, and processing software, combined with decades of
-                        experience! Through integrated supply chain solutions
+                       We understand the importance of every shipment — and its impact on your supply chain. That’s
+                        why we treat each cargo as a priority, offering optimized shipping solutions across air, sea, and
+                        land routes.
+                    </p>
+                    <p class="mb-3">
+                        Our expert team leverages the latest technology and a global network of partners to ensure fast,
+                        secure, and efficient delivery
+                    </p>
+                    <p class="mb-3">
+                        Your logistics, powered by experience, speed, and trust.
                     </p>
                     <div class="d-flex align-items-center">
                         <i class="fa fa-headphones fa-2x flex-shrink-0 bg-primary rounded-1 p-3 text-white"></i>
                         <div class="ps-4">
                             <h6>Call for any query!</h6>
-                            <h3 class="text-primary m-0">+012 345 6789</h3>
+                            <a class="text-primary fw-bold h5" href="tel:+97142322877">+971 4 232 2877</a>
                         </div>
                     </div>
                 </div>
@@ -240,21 +204,63 @@
     <!-- Fact End -->
 
 
+    <!-- About Start -->
+    <div class="container-fluid overflow-hidden py-5 px-lg-0">
+        <div class="container about py-5 px-lg-0">
+            <div class="row g-5 mx-lg-0">
+                <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img loading="lazy" width="732" height="548" class="position-absolute img-fluid w-100 h-100" src="img/img-1.webp" style="object-fit: cover;" alt="Welcome to Beta Logistics FZE">
+                    </div>
+                </div>
+                <div class="col-lg-6 about-text wow fadeInUp" data-wow-delay="0.3s">
+                    <h6 class="text-dark text-uppercase mb-3">About Us</h6>
+                    <h2 class="mb-5 h1">Welcome to Beta Logistics FZE</h2>
+                    <p class="mb-3">
+                        Beta Logistics FZE, headquartered in Dubai, is a dynamic international logistics
+                        company committed to delivering world-class logistics and supply chain solutions with
+                        precision, reliability, and integrity.
+                    </p>
+                    <p class="mb-3">
+                        As experienced international freight forwarders, our mission is to provide exporters and
+                        importers with top-tier logistics services. Every shipment we handle is approached as a
+                        unique challenge and an opportunity to deliver excellence. We take pride in identifying
+                        and implementing the most optimal transportation solutions tailored to each client's
+                        specific needs.
+                    </p>
+                    <p class="mb-3">
+                      At BETA, we understand the critical role logistics plays in your business. We recognize
+                        the trust you place in us, and we honor that trust by ensuring your cargo moves swiftly,
+                        safely, and efficiently to its destination. Whether it's a single shipment or a
+                        comprehensive supply chain solution, we treat every project with urgency and care.
+                    </p>
+
+                    <a href="/about" class="btn btn-dark rounded-1 py-3 px-5">Explore More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
     <!-- Service Start -->
     <div class="container-xxl py-5">
         <div class="container py-5">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="text-dark text-uppercase">Our Services</h6>
-                <h1 class="mb-5">Explore Our Services</h1>
+                <h2 class="text-dark text-uppercase">Our Services</h2>
+                <p class="mb-5">
+                    At Beta Logistics FZE, we offer a comprehensive range of logistics and supply chain
+                    solutions designed to move your cargo swiftly, securely, and cost-effectively—across
+                    borders and industries. Explore our core services below
+                </p>
             </div>
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item p-4">
-                        <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/service-1.jpg" alt="">
-                        </div>
-                        <h4 class="mb-3">Air Freight</h4>
-                        <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
+                        <h4 class="mb-3">Sea Freight</h4>
+                        <p>
+                            We provide reliable and flexible ocean freight solutions for full container load (FCL),
+                            less-than-container load (LCL), and special project cargo.
+                        </p>
                         <a class="btn-slide mt-2" href="/service"><i class="fa fa-arrow-right"></i><span>Read More</span></a>
                     </div>
                 </div>
