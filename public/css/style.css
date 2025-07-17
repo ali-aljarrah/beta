@@ -172,7 +172,7 @@ body {
         position: relative;
         min-height: 500px;
     }
-    
+
     .header-carousel .owl-carousel-item img {
         position: absolute;
         width: 100%;
@@ -317,7 +317,7 @@ body {
 .price-item a.btn-slide i,
 .price-item a.btn-slide span,
 .team-item div.btn-slide i,
-.team-item div.btn-slide span {
+.team-item div.btn-slide span{
     position: relative;
     height: 40px;
     padding: 0 15px;
@@ -331,12 +331,38 @@ body {
     z-index: 2;
 }
 
+.service-item a.btn-slide .svg {
+    position: relative;
+    height: 40px;
+    padding: 0 15px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 10px;
+    color: #FFFFFF;
+    background: var(--primary);
+    border-radius: 0 35px 35px 0;
+    transition: .5s;
+    z-index: 2;
+}
+
+.service-item a.btn-slide:hover .svg {
+    background: var(--dark);
+}
+
+.service-item:hover a.btn-slide .svg {
+    border-radius: 0px;
+}
+
 .team-item div.btn-slide span a i {
     padding: 0 10px;
 }
 
 .team-item div.btn-slide span a:hover i {
     background: var(--dark);
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    background-color: var(--primary) !important;
 }
 
 .service-item a.btn-slide span,
@@ -561,4 +587,13 @@ body {
 .form-control:focus, .form-select:focus {
     border-color: var(--primary) !important;
     box-shadow: none !important;
+}
+
+.page-item.active .page-link {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.page-link {
+    color:  var(--primary);
 }

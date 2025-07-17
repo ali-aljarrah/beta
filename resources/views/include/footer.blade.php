@@ -63,13 +63,13 @@
 
 
     <!-- JavaScript Libraries -->
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" defer></script>
-    <script src="lib/wow/wow.min.js" defer></script>
-    <script src="lib/easing/easing.min.js" defer></script>
-    <script src="lib/waypoints/waypoints.min.js" defer></script>
-    <script src="lib/counterup/counterup.min.js" defer></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js" defer></script>
+    <script src="{{asset('js/jquery-3.4.1.min.js')}}"></script>
+    <script src="{{asset('js/bootstrap.bundle.min.js')}}" defer></script>
+    <script src="{{asset('lib/wow/wow.min.js')}}" defer></script>
+    <script src="{{asset('lib/easing/easing.min.js')}}" defer></script>
+    <script src="{{asset('lib/waypoints/waypoints.min.js')}}" defer></script>
+    <script src="{{asset('lib/counterup/counterup.min.js')}}" defer></script>
+    <script src="{{asset('lib/owlcarousel/owl.carousel.min.js')}}" defer></script>
 
     <!-- Javascript -->
-    <script src="js/main.js" defer></script>
+    <script src="{{asset('js/main.js')}}" defer></script>

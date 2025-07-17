@@ -1,5 +1,5 @@
 @include('include.head')
-
+ <title>Beta Logistics FZE</title>
 </head>
 
 <body>
@@ -51,97 +51,39 @@
     </div>
     <!-- Carousel End -->
 
-
-
-    <!-- News Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h1 class="mb-3">Latest News</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-12">
-                      <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="testimonial-item p-4 my-5">
-                            <div class="border-bottom p-4 mb-4">
-                                <h5 class="text-primary mb-1">Discount 20% !</h5>
-                            </div>
-                            <div class="p-4 pt-0">
-                                <p>
-                                    Ship with us now and get 20% discount starting from 20-05-2026 until 20-08-2025
-                                </p>
-                            </div>
-                        </div>
-                        <div class="testimonial-item p-4 my-5">
-                            <div class="border-bottom p-4 mb-4">
-                                <h5 class="text-primary mb-1">Discount 20% !</h5>
-                            </div>
-                            <div class="p-4 pt-0">
-                                <p>
-                                    Ship with us now and get 20% discount starting from 20-05-2026 until 20-08-2025
-                                </p>
-                            </div>
-                        </div>
-                        <div class="testimonial-item p-4 my-5">
-                            <div class="border-bottom p-4 mb-4">
-                                <h5 class="text-primary mb-1">Discount 20% !</h5>
-                            </div>
-                            <div class="p-4 pt-0">
-                                <p>
-                                    Ship with us now and get 20% discount starting from 20-05-2026 until 20-08-2025
-                                </p>
-                            </div>
-                        </div>
-                        <div class="testimonial-item p-4 my-5">
-                            <div class="border-bottom p-4 mb-4">
-                                <h5 class="text-primary mb-1">Discount 20% !</h5>
-                            </div>
-                            <div class="p-4 pt-0">
-                                <p>
-                                    Ship with us now and get 20% discount starting from 20-05-2026 until 20-08-2025
-                                </p>
-                            </div>
-                        </div>
-                        <div class="testimonial-item p-4 my-5">
-                            <div class="border-bottom p-4 mb-4">
-                                <h5 class="text-primary mb-1">Discount 20% !</h5>
-                            </div>
-                            <div class="p-4 pt-0">
-                                <p>
-                                    Ship with us now and get 20% discount starting from 20-05-2026 until 20-08-2025
-                                </p>
-                            </div>
-                        </div>
-                        <div class="testimonial-item p-4 my-5">
-                            <div class="border-bottom p-4 mb-4">
-                                <h5 class="text-primary mb-1">Discount 20% !</h5>
-                            </div>
-                            <div class="p-4 pt-0">
-                                <p>
-                                    Ship with us now and get 20% discount starting from 20-05-2026 until 20-08-2025
-                                </p>
-                            </div>
-                        </div>
-                        <div class="testimonial-item p-4 my-5">
-                            <div class="border-bottom p-4 mb-4">
-                                <h5 class="text-primary mb-1">Discount 20% !</h5>
-                            </div>
-                            <div class="p-4 pt-0">
-                                <p>
-                                    Ship with us now and get 20% discount starting from 20-05-2026 until 20-08-2025
-                                </p>
-                            </div>
+    @if (!empty($news) && count($news) > 0)
+        <!-- News Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="mb-3">Latest News</h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-12">
+                        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                            @foreach ($news as $item)
+                                <div class="testimonial-item p-4 my-5">
+                                    <div class="border-bottom p-4 mb-4">
+                                        <h5 class="text-primary mb-1">{{$item->title}}</h5>
+                                    </div>
+                                    <div class="p-4 pt-0">
+                                        <p>
+                                            {{$item->description}}
+                                        </p>
+                                    </div>
+                                </div>
+                            @endforeach
                         </div>
                     </div>
-                </div>
 
-                <div class="col-lg-12 mx-auto wow fadeIn text-center py-3" data-wow-delay="0.3s">
-                    <a href="/news" class="btn btn-dark py-md-3 px-md-5 me-3 rounded-1 animated slideInLeft">See All News</a>
+                    <div class="col-lg-12 mx-auto wow fadeIn text-center py-3" data-wow-delay="0.3s">
+                        <a href="{{route('news')}}" class="btn btn-dark py-md-3 px-md-5 me-3 rounded-1 animated slideInLeft">See All News</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- News End -->
+        <!-- News End -->
+    @endif
 
     <!-- Fact Start -->
     <div class="container-xxl py-5">
@@ -242,82 +184,42 @@
     </div>
     <!-- About End -->
 
-    <!-- Service Start -->
-    <div class="container-xxl py-5">
-        <div class="container py-5">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h2 class="text-dark text-uppercase">Our Services</h2>
-                <p class="mb-5">
-                    At Beta Logistics FZE, we offer a comprehensive range of logistics and supply chain
-                    solutions designed to move your cargo swiftly, securely, and cost-effectively—across
-                    borders and industries. Explore our core services below
-                </p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item p-4">
-                        <h4 class="mb-3">Sea Freight</h4>
-                        <p>
-                            We provide reliable and flexible ocean freight solutions for full container load (FCL),
-                            less-than-container load (LCL), and special project cargo.
-                        </p>
-                        <a class="btn-slide mt-2" href="/service"><i class="fa fa-arrow-right"></i><span>Read More</span></a>
-                    </div>
+    @if (!empty($services) && count($services) > 0)
+        <!-- Service Start -->
+        <div class="container-xxl py-5">
+            <div class="container py-5">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h2 class="text-dark text-uppercase">Our Services</h2>
+                    <p class="mb-5">
+                        At Beta Logistics FZE, we offer a comprehensive range of logistics and supply chain
+                        solutions designed to move your cargo swiftly, securely, and cost-effectively—across
+                        borders and industries. Explore our core services below
+                    </p>
                 </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item p-4">
-                        <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/service-2.jpg" alt="">
+                <div class="row g-4">
+                    @foreach ($services as $index => $service)
+                        <div class="col-md-6 col-lg-4 wow fadeInUp mx-auto" data-wow-delay="0.{{$index+2}}s">
+                            <div class="service-item p-4">
+                                <h4 class="mb-3">{{$service->title}}</h4>
+                                <p>
+                                    {{Str::limit($service->description, 150, '...')}}
+                                </p>
+                                <a class="btn-slide mt-2 d-flex" href="/service/{{$service->id}}/{{$service->slug}}">
+                                    <div class="svg">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                                        </svg>
+                                    </div>
+                                    <span>Check {{$service->title}}</span>
+                                </a>
+                            </div>
                         </div>
-                        <h4 class="mb-3">Sea Freight</h4>
-                        <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                        <a class="btn-slide mt-2" href="/service"><i class="fa fa-arrow-right"></i><span>Read More</span></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="service-item p-4">
-                        <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/service-3.jpg" alt="">
-                        </div>
-                        <h4 class="mb-3">Land Freight</h4>
-                        <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                        <a class="btn-slide mt-2" href="/service"><i class="fa fa-arrow-right"></i><span>Read More</span></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item p-4">
-                        <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/service-4.jpg" alt="">
-                        </div>
-                        <h4 class="mb-3">Special Cargo</h4>
-                        <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                        <a class="btn-slide mt-2" href="/service"><i class="fa fa-arrow-right"></i><span>Read More</span></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item p-4">
-                        <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/service-5.jpg" alt="">
-                        </div>
-                        <h4 class="mb-3">Customs Clearance</h4>
-                        <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                        <a class="btn-slide mt-2" href="/service"><i class="fa fa-arrow-right"></i><span>Read More</span></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="service-item p-4">
-                        <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/service-6.jpg" alt="">
-                        </div>
-                        <h4 class="mb-3">Shipping Services in Dubai</h4>
-                        <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                        <a class="btn-slide mt-2" href="/service"><i class="fa fa-arrow-right"></i><span>Read More</span></a>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Service End -->
+        <!-- Service End -->
+    @endif
 
 
     <!-- Feature Start -->
