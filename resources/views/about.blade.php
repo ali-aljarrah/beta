@@ -1,5 +1,5 @@
 @include('include.head')
-
+ <title>Beta Logistics FZE - About us</title>
 </head>
 
 <body>
@@ -64,9 +64,9 @@
                         <i class="fa fa-bullseye  text-primary fa-3x flex-shrink-0"></i>
                         <div class="ms-4">
                             <h5>Our Mission </h5>
-                            <p class="mb-0">To offer cost-effective, efficient, reliable, and fully customized logistics solutions tailored 
-                                to meet the diverse demands of our clients across various industries. From end-to-end 
-                                freight forwarding to seamless procurement, sourcing, and distribution, we provide 
+                            <p class="mb-0">To offer cost-effective, efficient, reliable, and fully customized logistics solutions tailored
+                                to meet the diverse demands of our clients across various industries. From end-to-end
+                                freight forwarding to seamless procurement, sourcing, and distribution, we provide
                                 dependable service at every step of the journey.
                             </p>
                         </div>
@@ -75,7 +75,7 @@
                         <i class="fa fa-eye text-primary fa-3x flex-shrink-0"></i>
                         <div class="ms-4">
                             <h5>Our Vision</h5>
-                            <p class="mb-0">To be a global logistics leader known for excellence, transparency, and innovation in 
+                            <p class="mb-0">To be a global logistics leader known for excellence, transparency, and innovation in
                                 every shipment we handle.
                             </p>
                         </div>
@@ -88,9 +88,9 @@
                                 <ul>
                                     <li>Experts in Procurement & Distribution. </li>
                                     <li>Experts in all Freight Forwarding activities. </li>
-                                    <li>Comprehensive Service provided, right from freight, logistics, 
+                                    <li>Comprehensive Service provided, right from freight, logistics,
                                         custom clearance, warehousing & transportation. </li>
-                                    <li>Specialist in movement of mobile phones, Watches, Electronics & 
+                                    <li>Specialist in movement of mobile phones, Watches, Electronics &
                                        High Value goods. </li>
                                     <li> Security monitored office & warehouse. </li>
                                     <li>Collective expertise of over a decade.</li>
@@ -114,8 +114,8 @@
         <div class="container py-5">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="text-dark text-uppercase">Meet our team</h6>
-                <p class="mb-0">Our team of highly skilled professionals combines deep industry expertise with the latest 
-                    technologies and best-in-class resources. This enables us to manage global shipments 
+                <p class="mb-0">Our team of highly skilled professionals combines deep industry expertise with the latest
+                    technologies and best-in-class resources. This enables us to manage global shipments
                     with precision, consistency, and accountability.
                 </p>
             </div>
