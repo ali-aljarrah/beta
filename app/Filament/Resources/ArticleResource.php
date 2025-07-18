@@ -2,26 +2,29 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\NewsResource\Pages;
-use App\Models\News;
+use App\Filament\Resources\ArticleResource\Pages;
+use App\Models\Article;
 use Filament\Forms\Components\Grid;
+use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Forms\Form;
+use Filament\Forms\Set;
 use Filament\Resources\Resource;
 use Filament\Tables;
-use Filament\Tables\Table;
-use Filament\Tables\Actions\ActionGroup;
 use Filament\Tables\Columns\BooleanColumn;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Table;
+use Illuminate\Support\Str;
+use Filament\Tables\Actions\ActionGroup;
 
-class NewsResource extends Resource
+class ArticleResource extends Resource
 {
-    protected static ?string $model = News::class;
+    protected static ?string $model = Article::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-paper-airplane';
+    protected static ?string $navigationIcon = 'heroicon-o-newspaper';
 
     public static function form(Form $form): Form
     {
@@ -32,12 +35,31 @@ class NewsResource extends Resource
                         TextInput::make('title')
                             ->required()
                             ->maxLength(255)
+                            ->live(onBlur: true)
+                            ->afterStateUpdated(fn (string $operation, $state, Set $set) =>
+                                $operation === 'create'
+                                    ? $set('slug', Str::slug($state))
+                                    : null
+                            )
+                            ->columnSpan(6),
+
+                        TextInput::make('slug')
+                            ->required()
+                            ->disabled()
+                            ->dehydrated()
+                            ->unique(Article::class, 'slug', ignoreRecord: true)
+                            ->maxLength(255)
                             ->columnSpan(6),
                     ]),
 
                     Textarea::make('description')
                         ->required()
                         ->rows(4),
+
+                    MarkdownEditor::make('content')
+                        ->required()
+                        ->columnSpanFull()
+                        ->fileAttachmentsDirectory('services'),
 
                     Toggle::make('is_active')
                         ->label('Is Active')
@@ -67,7 +89,7 @@ class NewsResource extends Resource
                 //
             ])
             ->actions([
-                 ActionGroup::make([
+                ActionGroup::make([
                     Tables\Actions\ViewAction::make(),
                     Tables\Actions\EditAction::make(),
                     Tables\Actions\DeleteAction::make(),
@@ -90,9 +112,9 @@ class NewsResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListNews::route('/'),
-            'create' => Pages\CreateNews::route('/create'),
-            'edit' => Pages\EditNews::route('/{record}/edit'),
+            'index' => Pages\ListArticles::route('/'),
+            'create' => Pages\CreateArticle::route('/create'),
+            'edit' => Pages\EditArticle::route('/{record}/edit'),
         ];
     }
 }

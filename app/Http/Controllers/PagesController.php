@@ -42,4 +42,8 @@ class PagesController extends Controller
             'news' => $news
         ]);
     }
+
+    public function blog() {
+        return view('blog');
+    }
 }

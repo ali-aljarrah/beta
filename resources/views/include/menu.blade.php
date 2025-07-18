@@ -33,7 +33,7 @@
                     </div>
                 @endif
 
-                <a href="/blog" class="nav-item nav-link">Blog</a>
+                <a href="{{route('blog')}}" class="nav-item nav-link {{ request()->is("blog")? "active" : "" }}">Blog</a>
                 <a href="{{route('news')}}" class="nav-item nav-link {{ request()->is("news")? "active" : "" }}">News</a>
                 <a href="/contact" class="nav-item nav-link">Contact</a>
             </div>

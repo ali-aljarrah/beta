@@ -20,8 +20,8 @@
                         </div>
                     </div>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@beta.com</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><a href="tel:+971503440101">+971503440101</a></p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i><a href="mailto:info@betafzco.com">info@betafzco.com</a></p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -49,7 +49,7 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-12 text-center mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="/">Beta.com</a>, All Right Reserved.
+                        &copy; <a class="border-bottom" href="/">Betafzco.com/</a>, All Right Reserved. | Powered By <a href="https://missingspot.net/" target="_blank" rel="noopener noreferrer">Missing Spot</a>
                     </div>
                 </div>
             </div>

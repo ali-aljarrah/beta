@@ -4,11 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class News extends Model
+class Article extends Model
 {
     protected $fillable = [
         'title',
+        'slug',
         'description',
+        'content',
         'is_active',
     ];
 }
