@@ -103,14 +103,16 @@
                 </div>
                 <div class="col-lg-6 about-text wow fadeInUp" data-wow-delay="0.3s">
                     <h2 class="mb-5 h1">WHY DO YOU CHOOSE US?</h2>
-                    <p> <i class="fa fa-arrow-circle-right text-primary"></i> Experts in Procurement & Distribution. </p>
-                    <p> <i class="fa fa-arrow-circle-right text-primary"></i> Experts in all Freight Forwarding activities. </p>
-                    <p> <i class="fa fa-arrow-circle-right text-primary"></i> Comprehensive Service provided, right from freight, logistics,
-                        custom clearance, warehousing & transportation. </p>
-                    <p> <i class="fa fa-arrow-circle-right text-primary"></i> Specialist in movement of mobile phones, Watches, Electronics &
-                        High Value goods. </p>
-                    <p> <i class="fa fa-arrow-circle-right text-primary"></i> Security monitored office & warehouse. </p>
-                    <p> <i class="fa fa-arrow-circle-right text-primary"></i> Collective expertise of over a decade.</p>
+                    <ul>
+                        <li class="pb-2">Experts in Procurement & Distribution. </li>
+                        <li class="pb-2">Experts in all Freight Forwarding activities. </li>
+                        <li class="pb-2">Comprehensive Service provided, right from freight, logistics,
+                            custom clearance, warehousing & transportation. </li>
+                        <li class="pb-2">Specialist in movement of mobile phones, Watches, Electronics &
+                            High Value goods. </li>
+                        <li class="pb-2"> Security monitored office & warehouse. </li>
+                        <li class="pb-2">Collective expertise of over a decade.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -121,23 +123,13 @@
     <div class="container-xxl py-5">
         <div class="container py-5">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="text-dark text-uppercase mb-3">Meet our team</h6>
+                <h2 class="mb-5 h1">Meet our team</h2>
                 <p class="mb-5">Our team of highly skilled professionals combines deep industry expertise with the latest
                     technologies and best-in-class resources. This enables us to manage global shipments
                     with precision, consistency, and accountability.
                 </p>
-            <hr>
             </div>
             <div class="row g-4">
-                {{-- <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item p-4">
-                        <div class="overflow-hidden mb-4">
-                            <img class="img-fluid" src="img/team-1.jpg" alt="">
-                        </div>
-                        <h5 class="mb-0">Fadi Saeed Al Abdullah</h5>
-                        <p>Managing Director </p>
-                    </div>
-                </div> --}}
                 <div class="col-lg-12 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                         <h5 class=" mt-5 mb-3">Fadi Saeed Al Abdullah</h5>
                         <p>Managing Director </p>
@@ -157,8 +149,7 @@
                             professionalism and customer satisfaction.
                         </p>
                         <div class="btn-slide mt-1">
-                            <i class="fa fa-share fa-25"></i>
-                            <span class="px-2">
+                            <span>
                                 <a href="https://www.linkedin.com/in/fadi-al-abdullah-15a829201/"><i class="fab fa-linkedin-in fa-25 px-2"></i></a>
                                 <a href="fadi.alabdullah@betafzco.com"><i class="fa fa-envelope fa-25"></i></a>
                             </span>
