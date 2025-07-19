@@ -75,7 +75,7 @@
 
     <!-- JavaScript Libraries -->
     <script src="{{asset('js/jquery-3.4.1.min.js')}}"></script>
-    <script src="{{asset('js/bootstrap.bundle.min.js')}}" defer></script>
+    <script src="{{asset('js/bootstrap.bundle.min.js')}}" ></script>
     <script src="{{asset('lib/wow/wow.min.js')}}" defer></script>
     <script src="{{asset('lib/easing/easing.min.js')}}" defer></script>
     <script src="{{asset('lib/waypoints/waypoints.min.js')}}" defer></script>
