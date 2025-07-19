@@ -103,18 +103,14 @@
                 </div>
                 <div class="col-lg-6 about-text wow fadeInUp" data-wow-delay="0.3s">
                     <h2 class="mb-5 h1">WHY DO YOU CHOOSE US?</h2>
-                    <p class="mb-0">
-                        <ul>
-                            <li>Experts in Procurement & Distribution. </li>
-                            <li>Experts in all Freight Forwarding activities. </li>
-                            <li>Comprehensive Service provided, right from freight, logistics,
-                                custom clearance, warehousing & transportation. </li>
-                            <li>Specialist in movement of mobile phones, Watches, Electronics &
-                               High Value goods. </li>
-                            <li>Security monitored office & warehouse. </li>
-                            <li>Collective expertise of over a decade.</li>
-                        </ul>
-                    </p>
+                    <p> <i class="fa fa-arrow-circle-right text-primary"></i> Experts in Procurement & Distribution. </p>
+                    <p> <i class="fa fa-arrow-circle-right text-primary"></i> Experts in all Freight Forwarding activities. </p>
+                    <p> <i class="fa fa-arrow-circle-right text-primary"></i> Comprehensive Service provided, right from freight, logistics,
+                        custom clearance, warehousing & transportation. </p>
+                    <p> <i class="fa fa-arrow-circle-right text-primary"></i> Specialist in movement of mobile phones, Watches, Electronics &
+                        High Value goods. </p>
+                    <p> <i class="fa fa-arrow-circle-right text-primary"></i> Security monitored office & warehouse. </p>
+                    <p> <i class="fa fa-arrow-circle-right text-primary"></i> Collective expertise of over a decade.</p>
                 </div>
             </div>
         </div>
