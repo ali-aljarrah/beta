@@ -111,7 +111,7 @@
                                 custom clearance, warehousing & transportation. </li>
                             <li>Specialist in movement of mobile phones, Watches, Electronics &
                                High Value goods. </li>
-                            <li> Security monitored office & warehouse. </li>
+                            <li>Security monitored office & warehouse. </li>
                             <li>Collective expertise of over a decade.</li>
                         </ul>
                     </p>
@@ -130,26 +130,21 @@
                     technologies and best-in-class resources. This enables us to manage global shipments
                     with precision, consistency, and accountability.
                 </p>
+            <hr>
             </div>
             <div class="row g-4">
-                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                {{-- <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item p-4">
                         <div class="overflow-hidden mb-4">
                             <img class="img-fluid" src="img/team-1.jpg" alt="">
                         </div>
                         <h5 class="mb-0">Fadi Saeed Al Abdullah</h5>
                         <p>Managing Director </p>
-                        {{-- <div class="btn-slide mt-1">
-                            <i class="fa fa-share"></i>
-                            <span>
-                                <a href="https://www.linkedin.com/in/fadi-al-abdullah-15a829201/"><i class="fab fa-instagram"></i></a>
-                                <a href="fadi.alabdullah@betafzco.com"><i class="fab fa-instagram"></i></a>
-                            </span>
-                        </div> --}}
                     </div>
-                </div>
-                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <h5 class="mb-3">Fadi Saeed Al Abdullah</h5>
+                </div> --}}
+                <div class="col-lg-12 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <h5 class=" mt-5 mb-3">Fadi Saeed Al Abdullah</h5>
+                        <p>Managing Director </p>
                         <p>Mr. Fadi is the visionary founder behind Beta Logistics FZE, bringing with him a deep 
                             passion for innovation, quality, and customer-focused solutions. He established the 
                             company in November 2022 with a clear mission: 
@@ -166,10 +161,10 @@
                             professionalism and customer satisfaction.
                         </p>
                         <div class="btn-slide mt-1">
-                            <i class="fa fa-share"></i>
-                            <span>
-                                <a href="https://www.linkedin.com/in/fadi-al-abdullah-15a829201/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                                <a href="fadi.alabdullah@betafzco.com"><i class="fa fa-envelope-open"></i></a>
+                            <i class="fa fa-share fa-25"></i>
+                            <span class="px-2">
+                                <a href="https://www.linkedin.com/in/fadi-al-abdullah-15a829201/"><i class="fab fa-linkedin-in fa-25 px-2"></i></a>
+                                <a href="fadi.alabdullah@betafzco.com"><i class="fa fa-envelope fa-25"></i></a>
                             </span>
                     </div>
                 </div>
