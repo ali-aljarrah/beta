@@ -2,26 +2,13 @@
  <title>Beta Logistics FZE - Free Quote</title>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/css/intlTelInput.css">
-
-<!-- Select2 CSS -->
-<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<link href="{{asset('css/select2.min.css')}}" rel="stylesheet" />
+<link href="{{asset('css/toastr.min.css')}}" rel="stylesheet" />
 
 <style>
-    .iti {
-        width: 100%;
-    }
-    .select2-container--default .select2-selection--single .select2-selection__rendered {
-        display: flex;
-        height: 55px;
-        align-items: center
-    }
-    .select2-container--default .select2-selection--single {
-        height: 55px;
-    }
-    .select2-container--default .select2-selection--single .select2-selection__arrow {
-        top: 14px;
-    }
+
 </style>
+
 </head>
 
 <body>
@@ -46,32 +33,36 @@
                     </div>
                     <div class="bg-light rounded-1 text-center p-lg-5 p-3 wow fadeIn" data-wow-delay="0.5s">
                         <form id="quoteForm" class="needs-validation" novalidate>
+                            @csrf
                             <div class="row g-3">
+                                <div class="col-lg-12 text-start">
+                                    <p class="h4">Your Information</p>
+                                </div>
                                 <div class="col-12 col-md-6 col-lg-4">
                                     <div class="form-floating">
-                                        <input required type="text" class="form-control rounded-1" id="name" placeholder="Your Name" style="height: 55px;">
+                                        <input required type="text" class="form-control rounded-1" id="name" name="name" placeholder="Your Name" style="height: 55px;">
                                         <label for="name">Your Name <span class="text-danger">*</span></label>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6 col-lg-4">
                                     <div class="form-floating">
-                                        <input required type="email" class="form-control rounded-1" id="email" placeholder="Your Email" style="height: 55px;">
+                                        <input required type="email" class="form-control rounded-1" id="email" name="email" placeholder="Your Email" style="height: 55px;">
                                         <label for="email">Your Email <span class="text-danger">*</span></label>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6 col-lg-4">
                                     <div class="form-group">
-                                        <input type="tel" id="phone" class="form-control w-100 rounded-1" placeholder="Your Mobile" style="height: 55px;">
+                                        <input type="tel" id="phone" name="phone" class="form-control w-100 rounded-1" placeholder="Your Mobile" style="height: 55px;">
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6 col-lg-4">
                                     <div class="form-floating">
-                                        <input type="tel" class="form-control rounded-1" id="fax" placeholder="Your Fax" style="height: 55px;">
+                                        <input type="tel" class="form-control rounded-1" id="fax" name="fax" placeholder="Your Fax" style="height: 55px;">
                                         <label for="fax">Fax</label>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6 col-lg-4">
-                                    <select id="countrySelect" class="form-select rounded-1" style="height: 55px;" required>
+                                    <select id="countrySelect" name="countrySelect" class="form-select rounded-1" style="height: 55px;" required>
                                         <option value="">Select a country</option>
                                         <option value="AF">Afghanistan</option>
                                         <option value="AL">Albania</option>
@@ -275,15 +266,15 @@
                                 </div>
                                 <div class="col-12 col-md-6 col-lg-4">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control rounded-1" id="companyName" placeholder="Your Company Name" style="height: 55px;">
+                                        <input type="text" class="form-control rounded-1" id="companyName" name="companyName" placeholder="Your Company Name" style="height: 55px;">
                                         <label for="companyName">Company Name</label>
                                     </div>
                                 </div>
                                 <div class="col-lg-12 mt-5 text-start">
-                                    <h3>Cargo Details</h3>
+                                    <p class="h4">Cargo Details</p>
                                 </div>
                                 <div class="col-12 col-md-6 col-lg-4">
-                                    <select id="FreightSelect" required class="form-select rounded-1" style="height: 55px;">
+                                    <select id="FreightSelect" name="FreightSelect" required class="form-select rounded-1" style="height: 55px;">
                                         <option value="">Select a Freight</option>
                                         <option value="air-freight">Air Freight</option>
                                         <option value="sea-freight">Sea Freight</option>
@@ -301,7 +292,7 @@
                                     </select>
                                 </div>
                                 <div class="col-12 col-md-6 col-lg-4">
-                                    <select id="originCountrySelect" class="form-select rounded-1" style="height: 55px;" required>
+                                    <select id="originCountrySelect" name="originCountrySelect" class="form-select rounded-1" style="height: 55px;" required>
                                         <option value="">Select a country</option>
                                         <option value="AF">Afghanistan</option>
                                         <option value="AL">Albania</option>
@@ -505,12 +496,12 @@
                                 </div>
                                  <div class="col-12 col-md-6 col-lg-4">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control rounded-1" id="stateOriginName" placeholder="Your Cargo State Origin Name" style="height: 55px;">
+                                        <input type="text" class="form-control rounded-1" id="stateOriginName" name="stateOriginName" placeholder="Your Cargo State Origin Name" style="height: 55px;">
                                         <label for="stateOriginName">State Origin Name</label>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6 col-lg-4">
-                                    <select id="departuretypeSelect" class="form-select rounded-1" style="height: 55px;">
+                                    <select id="departuretypeSelect" name="departuretypeSelect" class="form-select rounded-1" style="height: 55px;">
                                         <option value="">Select a Departure type</option>
                                         <option value="sea-port">Sea Port</option>
                                         <option value="air-port">Air Port</option>
@@ -519,7 +510,7 @@
                                     </select>
                                 </div>
                                 <div class="col-12 col-md-6 col-lg-4">
-                                    <select id="destinationCountrySelect" class="form-select rounded-1" style="height: 55px;" required>
+                                    <select id="destinationCountrySelect" name="destinationCountrySelect" class="form-select rounded-1" style="height: 55px;" required>
                                         <option value="">Select a country</option>
                                         <option value="AF">Afghanistan</option>
                                         <option value="AL">Albania</option>
@@ -723,12 +714,12 @@
                                 </div>
                                 <div class="col-12 col-md-6 col-lg-4">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control rounded-1" id="stateDestinationName" placeholder="Your Cargo Destination State Name" style="height: 55px;">
+                                        <input type="text" class="form-control rounded-1" id="stateDestinationName" name="stateDestinationName" placeholder="Your Cargo Destination State Name" style="height: 55px;">
                                         <label for="stateDestinationName">State Destination Name</label>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6 col-lg-4">
-                                    <select id="ArrivalType" required class="form-select rounded-1" style="height: 55px;">
+                                    <select id="ArrivalType" name="ArrivalType" required class="form-select rounded-1" style="height: 55px;">
                                         <option value="">Select a Freight</option>
                                         <option value="air-freight">Air Freight</option>
                                         <option value="sea-freight">Sea Freight</option>
@@ -747,14 +738,17 @@
                                 </div>
                                 <div class="col-12 col-md-6 col-lg-4">
                                     <div class="form-floating">
-                                        <input type="date" class="form-control rounded-1" id="shippingDate" placeholder="Required Shipping Date" style="height: 55px;">
+                                        <input type="date" class="form-control rounded-1" id="shippingDate" name="shippingDate" placeholder="Required Shipping Date" style="height: 55px;">
                                         <label for="shippingDate">Required Shipping Date</label>
                                     </div>
                                 </div>
+                                <div class="col-lg-12 mt-5 text-start">
+                                    <p class="h4">Packages Details</p>
+                                </div>
                                 <div class="col-lg-12">
                                     <div class="row">
-                                         <div class="col-12 col-md-6 col-lg-4">
-                                            <select id="ContainerType" required class="form-select rounded-1" style="height: 55px;">
+                                        <div class="col-12 col-md-6 col-lg-4 mb-3">
+                                            <select id="ContainerType" name="ContainerType" required class="form-select rounded-1" style="height: 55px;">
                                                 <option value="">Select Container Type</option>
                                                 <option value="20-ft-standard">20 FT Standard</option>
                                                 <option value="40-ft-standard">40 FT Standard</option>
@@ -765,35 +759,35 @@
                                         </div>
                                         <div class="col-12 col-md-6 col-lg-4">
                                             <div class="form-floating">
-                                                <input required type="text" class="form-control rounded-1" id="commodity" placeholder="Commodity" style="height: 55px;">
+                                                <input required type="text" class="form-control rounded-1" id="commodity" name="commodity" placeholder="Commodity" style="height: 55px;">
                                                 <label for="commodity">Commodity <span class="text-danger">*</span></label>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col-lg-12 mt-5 text-start">
+                                    <p class="h4">Dimensions L X W X H</p>
+                                </div>
                                 <div class="col-lg-12">
                                     <div class="row">
-                                        <div class="col-12 col-md-6 col-lg-3">
+                                        <div class="col-12 col-md-6 col-lg-3 mb-3">
                                             <div class="form-floating">
-                                                <input type="text" class="form-control rounded-1" id="dimensions-1" placeholder="Dimensions L X W X H" style="height: 55px;">
-                                                <label for="dimensions-1">Dimensions L X W X H</label>
+                                                <input type="text" class="form-control rounded-1" id="dimensions1" name="dimensions1" placeholder="Dimensions L X W X H" style="height: 55px;">
                                             </div>
                                         </div>
-                                         <div class="col-12 col-md-6 col-lg-3">
+                                         <div class="col-12 col-md-6 col-lg-3 mb-3">
                                             <div class="form-floating">
-                                                <input type="text" class="form-control rounded-1" id="dimensions-2" placeholder="Dimensions L X W X H" style="height: 55px;">
-                                                <label for="dimensions-2">Dimensions L X W X H</label>
+                                                <input type="text" class="form-control rounded-1" id="dimensions2" name="dimensions2" placeholder="Dimensions L X W X H" style="height: 55px;">
                                             </div>
                                         </div>
-                                         <div class="col-12 col-md-6 col-lg-3">
+                                         <div class="col-12 col-md-6 col-lg-3 mb-3">
                                             <div class="form-floating">
-                                                <input type="text" class="form-control rounded-1" id="dimensions-3" placeholder="Dimensions L X W X H" style="height: 55px;">
-                                                <label for="dimensions-3">Dimensions L X W X H</label>
+                                                <input type="text" class="form-control rounded-1" id="dimensions3" name="dimensions3" placeholder="Dimensions L X W X H" style="height: 55px;">
                                             </div>
                                         </div>
                                         <div class="col-12 col-md-6 col-lg-3">
                                             <div class="form-floating">
-                                                <select id="DimensionSizeType" required class="form-select rounded-1" style="height: 55px;">
+                                                <select id="DimensionSizeType" name="DimensionSizeType" class="form-select rounded-1" style="height: 55px;">
                                                     <option value="">Select Size Type</option>
                                                     <option value="centimeters">Centimeters</option>
                                                     <option value="inchs">Inchs</option>
@@ -804,14 +798,110 @@
                                         </div>
                                     </div>
                                 </div>
-                                {{-- <div class="col-12">
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <select id="CargoPacked" name="CargoPacked" required class="form-select rounded-1" style="height: 55px;">
+                                        <option value="bulk">Bulk</option>
+                                        <option value="unpacked">Unpacked</option>
+                                        <option value="boxed">Boxed</option>
+                                        <option value="drums">Drums</option>
+                                        <option value="bales">Bales</option>
+                                        <option value="cases-crates">Cases / Crates</option>
+                                        <option value="pallet-48-40">Pallet ISO 48" x 40"</option>
+                                        <option value="pallet-39-37-47-24">Pallet ISO 39.37" x 47.24"</option>
+                                        <option value="pallet-44-88-44-88">Pallet ISO 44.88" x 44.88"</option>
+                                        <option value="pallet-42-42">Pallet ISO 42" x 42"</option>
+                                        <option value="pallet-43-30-43-30">Pallet ISO 43.30" x 43.30"</option>
+                                        <option value="pallet-31-50-47-24">Pallet ISO 31.50" x 47.24"</option>
+                                        <option value="container-20">Container 20'</option>
+                                        <option value="container-40">Container 40'</option>
+                                        <option value="container-40-high-cube">Container 40' High-cube</option>
+                                        <option value="container-45-high-cube">Container 45' High-cube</option>
+                                        <option value="air-freight-cotainer-ld-1">Air Freight Cotainer LD-1</option>
+                                        <option value="air-freight-cotainer-ld-2">Air Freight Cotainer LD-2</option>
+                                        <option value="air-freight-cotainer-ld-3">Air Freight Cotainer LD-3</option>
+                                        <option value="air-freight-cotainer-ld-4">Air Freight Cotainer LD-4</option>
+                                        <option value="air-freight-cotainer-ld-5">Air Freight Cotainer LD-5</option>
+                                        <option value="air-freight-cotainer-ld-6">Air Freight Cotainer LD-6</option>
+                                        <option value="air-freight-cotainer-ld-7">Air Freight Cotainer LD-7</option>
+                                        <option value="air-freight-cotainer-ld-8">Air Freight Cotainer LD-8</option>
+                                        <option value="air-freight-cotainer-ld-9">Air Freight Cotainer LD-9</option>
+                                        <option value="air-freight-cotainer-ld-10">Air Freight Cotainer LD-10</option>
+                                        <option value="air-freight-cotainer-ld-11">Air Freight Cotainer LD-11</option>
+                                        <option value="air-freight-cotainer-ld-29">Air Freight Cotainer LD-29</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4">
                                     <div class="form-floating">
-                                        <textarea required class="form-control rounded-1" id="message" placeholder="Special Note" style="height: 100px"></textarea>
+                                        <input type="number" class="form-control rounded-1" id="packingNumber" name="packingNumber" placeholder="packing-number" style="height: 55px;">
+                                        <label for="packingNumber">No. of Packing</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control rounded-1" id="totalWeight" name="totalWeight" placeholder="total-weight" style="height: 55px;">
+                                        <label for="total-weight">Total Weight</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <select id="incoterms" name="incoterms" required class="form-select rounded-1" style="height: 55px;">
+                                        <option value="unknown">Unknown</option>
+                                        <option value="EXW">EXW</option>
+                                        <option value="FCA">FCA</option>
+                                        <option value="FAS">FAS</option>
+                                        <option value="FOB">FOB</option>
+                                        <option value="CFR">CFR</option>
+                                        <option value="CIF">CIF</option>
+                                        <option value="CPT">CPT</option>
+                                        <option value="CIP">CIP</option>
+                                        <option value="DAF">DAF</option>
+                                        <option value="DES">DES</option>
+                                        <option value="DEQ">DEQ</option>
+                                        <option value="DDU">DDU</option>
+                                        <option value="DDP">DDP</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-12 mt-5 text-start">
+                                    <p class="h4">Supports From Swift PRO Freight Services</p>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-6 col-12 mb-3">
+                                            <div class="form-check form-switch text-start">
+                                                <input class="form-check-input" type="checkbox" id="cargoStackable" name="cargoStackable">
+                                                <label class="form-check-label" for="cargoStackable">Is your cargo stackable?</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-12 mb-3">
+                                            <div class="form-check form-switch text-start">
+                                                <input class="form-check-input" type="checkbox" id="cargoHazardous" name="cargoHazardous">
+                                                <label class="form-check-label" for="cargoHazardous">Is Your cargo Hazardous? Material Safety Data Sheet (MSDM) a must to Quote</label>
+                                            </div>
+                                        </div>
+                                         <div class="col-lg-4 col-md-6 col-12 mb-3">
+                                            <div class="form-check form-switch text-start">
+                                                <input class="form-check-input" type="checkbox" id="cargoInsurance" name="cargoInsurance">
+                                                <label class="form-check-label" for="cargoInsurance">Do you Require cargo Insurance?</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control rounded-1" id="cargoValue" name="cargoValue" placeholder="cargoValue" style="height: 55px;">
+                                        <label for="cargoValue">Mention the value of the cargo</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control rounded-1" id="message" name="message" placeholder="Special Note" style="height: 100px"></textarea>
                                         <label for="message">Special Note</label>
                                     </div>
-                                </div> --}}
+                                </div>
+                                <div class="col-12 mb-4">
+                                    <div class="g-recaptcha" data-sitekey="{{ config('services.recaptcha.site_key') }}"></div>
+                                </div>
                                 <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3 rounded-1" type="submit">Submit</button>
+                                    <button id="submitBtn" class="btn btn-primary w-100 py-3 rounded-1" type="submit">Submit</button>
                                 </div>
                             </div>
                         </form>
@@ -822,189 +912,125 @@
     </section>
     <!-- Quote End -->
 
-    <section class="py-5">
-        <div class="container">
-            <div class="col-lg-12 mb-5 wow fadeInUp text-center" data-wow-delay="0.2s">
-                <h2 class="text-dark">Get in touch with us!</h2>
-            </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6 mb-4 wow fadeInUp h-100 mx-auto" data-wow-delay="0.2s">
-                    <div class="text-center px-3 py-4 shadow-sm border border-1 rounded-1 d-flex flex-column justify-content-center align-items-center h-100">
-                        <i class="fa fa-envelope text-primary fa-4x flex-shrink-0 mb-4"></i>
-                        <p class="h5 mb-2">
-                            <span>Email Address</span>
-                        </p>
-                        <div>
-                            <a class="text-dark text-decoration-underline" href="mailto:info@betafzco.com">info@betafzco.com</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 wow fadeInUp h-100 mx-auto" data-wow-delay="0.2s">
-                    <div class="text-center px-3 py-4 shadow-sm border border-1 rounded-1 d-flex flex-column justify-content-center align-items-center h-100">
-                        <i class="fa fa-headphones text-primary fa-4x flex-shrink-0 mb-4"></i>
-                        <p class="h5 mb-2">
-                            <span>Phone Number</span>
-                        </p>
-                        <div>
-                            <a class="text-dark text-decoration-underline" href="tel:+:971503440101">+971503440101</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 wow fadeInUp h-100 mx-auto" data-wow-delay="0.2s">
-                    <div class="text-center px-3 py-4 shadow-sm border border-1 rounded-1 d-flex flex-column justify-content-center align-items-center h-100">
-                        <i class="fa fa-map text-primary fa-4x flex-shrink-0 mb-4"></i>
-                        <p class="h5 mb-2">
-                            <span>UAE Address</span>
-                        </p>
-                        <div>
-                            <p class="text-dark mb-0">
-                                Dubai, Jafza - UA-03
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 wow fadeInUp h-100 mx-auto" data-wow-delay="0.2s">
-                    <div class="text-center px-3 py-4 shadow-sm border border-1 rounded-1 d-flex flex-column justify-content-center align-items-center h-100">
-                        <i class="fa fa-map text-primary fa-4x flex-shrink-0 mb-4"></i>
-                        <p class="h5 mb-2">
-                            <span>IRAQ, Baghdad Address</span>
-                        </p>
-                        <div>
-                            <p class="text-dark mb-0">
-                                Baghdad, Aldoura
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 wow fadeInUp h-100 mx-auto" data-wow-delay="0.2s">
-                    <div class="text-center px-3 py-4 shadow-sm border border-1 rounded-1 d-flex flex-column justify-content-center align-items-center h-100">
-                        <i class="fa fa-map text-primary fa-4x flex-shrink-0 mb-4"></i>
-                        <p class="h5 mb-2">
-                            <span>IRAQ, Erbil Address</span>
-                        </p>
-                        <div>
-                            <p class="text-dark mb-0">
-                               Mousal Road, Alwaa - WH # 445
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 wow fadeInUp h-100 mx-auto" data-wow-delay="0.2s">
-                    <div class="text-center px-3 py-4 shadow-sm border border-1 rounded-1 d-flex flex-column justify-content-center align-items-center h-100">
-                        <i class="fa fa-map text-primary fa-4x flex-shrink-0 mb-4"></i>
-                        <p class="h5 mb-2">
-                            <span>IRAQ, Duhok Address</span>
-                        </p>
-                        <div>
-                            <p class="text-dark mb-0">
-                              K.R.O STR - Near Traffic
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 wow fadeInUp h-100 mx-auto" data-wow-delay="0.2s">
-                    <div class="text-center px-3 py-4 shadow-sm border border-1 rounded-1 d-flex flex-column justify-content-center align-items-center h-100">
-                        <i class="fa fa-map text-primary fa-4x flex-shrink-0 mb-4"></i>
-                        <p class="h5 mb-2">
-                            <span>IRAQ, Karbala Address</span>
-                        </p>
-                        <div>
-                            <p class="text-dark mb-0">
-                             Al-Iskan Street
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 wow fadeInUp h-100 mx-auto" data-wow-delay="0.2s">
-                    <div class="text-center px-3 py-4 shadow-sm border border-1 rounded-1 d-flex flex-column justify-content-center align-items-center h-100">
-                        <i class="fa fa-map text-primary fa-4x flex-shrink-0 mb-4"></i>
-                        <p class="h5 mb-2">
-                            <span>IRAQ, Sulaymaniyah Address</span>
-                        </p>
-                        <div>
-                            <p class="text-dark mb-0">
-                                Salem Street - Near Rand Gallery
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
      @include('include.footer')
 
-     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/intlTelInput.min.js"></script>
-<script>
-  const input = document.querySelector("#phone");
-  window.intlTelInput(input, {
-    loadUtils: () => import("https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/utils.js"),
-  });
-</script>
+     <script src="{{asset('js/toastr.min.js')}}"></script>
+     <script src="{{asset('js/intlTelInput.min.js')}}"></script>
+     <script src="{{asset('js/select2.min.js')}}"></script>
+     <script src="{{asset('js/quote.js')}}"></script>
 
-<!-- Select2 JS -->
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-<script>
-  $(document).ready(function() {
-    $('#countrySelect').select2({
-      placeholder: "Select a country",
-      allowClear: true
-    });
-    $('#FreightSelect').select2({
-      placeholder: "Select a Shipping Mode",
-      allowClear: true
-    });
-    $('#originCountrySelect').select2({
-      placeholder: "Select Origin Country",
-      allowClear: true
-    });
-    $('#departuretypeSelect').select2({
-      placeholder: "Select Departure type",
-      allowClear: true
-    });
-      $('#destinationCountrySelect').select2({
-      placeholder: "Select Destination Country",
-      allowClear: true
-    });
-    $('#ArrivalType').select2({
-      placeholder: "Select Arrival Type",
-      allowClear: true
-    });
-     $('#ContainerType').select2({
-      placeholder: "Select Container Type",
-      allowClear: true
-    });
-     $('#DimensionSizeType').select2({
-      placeholder: "Select Size Type",
-      allowClear: true
-    });
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+    (function () {
+        'use strict';
 
-  });
-</script>
-</script>
-     <script>
-        (function () {
-            'use strict'
+        const form = document.getElementById('quoteForm');
 
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            var forms = document.querySelectorAll('.needs-validation')
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
 
-            // Loop over them and prevent submission
-            Array.prototype.slice.call(forms).forEach(function (form) {
-                form.addEventListener('submit', function (event) {
-                    if (!form.checkValidity()) {
-                        event.preventDefault()
-                        event.stopPropagation()
+            $('#submitBtn').prop("disabled", true);
+
+            const isCountrySelectValid = validateSelect2('countrySelect');
+            const isFreightSelectValid = validateSelect2('FreightSelect');
+            const isoriginCountrySelectValid = validateSelect2('originCountrySelect');
+            const isdeparturetypeSelectValid = validateSelect2('departuretypeSelect');
+            const isdestinationCountrySelectValid = validateSelect2('destinationCountrySelect');
+            const isArrivalTypeValid = validateSelect2('ArrivalType');
+            const isContainerTypeValid = validateSelect2('ContainerType');
+
+
+            if (
+                    !form.checkValidity() || !isCountrySelectValid || !isFreightSelectValid
+                    || !isoriginCountrySelectValid || !isdeparturetypeSelectValid || !isdestinationCountrySelectValid
+                    || !isArrivalTypeValid || !isContainerTypeValid
+                )
+            {
+                toastr.error("Please fill up the required fields!");
+                form.classList.add('was-validated');
+                $('#submitBtn').prop("disabled", false);
+                return;
+            }
+
+            const formData = new FormData(form);
+
+            // Replace values with selected option text
+            [
+                'countrySelect',
+                'FreightSelect',
+                'originCountrySelect',
+                'departuretypeSelect',
+                'destinationCountrySelect',
+                'ArrivalType',
+                'ContainerType',
+                'DimensionSizeType',
+                'CargoPacked',
+                'incoterms'
+            ].forEach(id => {
+                const select = document.getElementById(id);
+                if (select && select.selectedIndex >= 0) {
+                    formData.set(id, select.options[select.selectedIndex].text);
+                }
+            });
+
+            // Set checkbox values
+            ['cargoStackable', 'cargoHazardous', 'cargoInsurance'].forEach(id => {
+                const checkbox = document.getElementById(id);
+                formData.set(id, checkbox.checked ? 'Yes' : 'No');
+            });
+
+            // Add reCAPTCHA
+            const recaptcha = grecaptcha.getResponse();
+            formData.append('g-recaptcha-response', recaptcha);
+
+
+            $.ajax({
+                url: '{{ route('submitQuote') }}',
+                type: 'POST',
+                data: formData,
+                processData: false, // prevent jQuery from processing data
+                contentType: false, // prevent jQuery from setting content type
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                success: function (response) {
+                    toastr.success("Quote submitted successfully!");
+                    form.reset();
+                    form.classList.remove('was-validated');
+                    grecaptcha.reset();
+                    $('#submitBtn').prop("disabled", false);
+                },
+                error: function (xhr) {
+                    $('#submitBtn').prop("disabled", false);
+                    if (xhr.status === 422 && xhr.responseJSON?.errors) {
+                        Object.values(xhr.responseJSON.errors).forEach(msgs => {
+                            toastr.error(msgs[0]);
+                        });
                     } else {
-                        event.preventDefault()
-                        console.log('test')
+                        toastr.error("Something went wrong. Please try again.");
                     }
+                }
+            });
+        }, false);
+    })();
 
-                    form.classList.add('was-validated')
-                }, false)
-            })
-        })()
-     </script>
+    function validateSelect2(id) {
+        const el = document.getElementById(id);
+        const container = $(`#${id}`).next('.select2'); // .select2-container
+
+        if (!el.value || el.value === '') {
+            container.addClass('is-invalid');
+            container.removeClass('is-valid');
+            return false;
+        } else {
+            container.removeClass('is-invalid');
+            container.addClass('is-valid');
+            return true;
+        }
+    }
+    </script>
 </body>
 
 </html>

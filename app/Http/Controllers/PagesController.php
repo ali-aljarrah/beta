@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\QuoteFormMail;
 use App\Models\Article;
 use App\Models\FAQ;
 use App\Models\News;
 use App\Models\Service;
 use App\Models\SupplyChain;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class PagesController extends Controller
 {
@@ -70,5 +73,25 @@ class PagesController extends Controller
 
     public function quote() {
         return view('quote');
+    }
+
+    public function submitQuote(Request $request) {
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email',
+            'countrySelect' => 'required|string',
+            'FreightSelect' => 'required|string',
+            'originCountrySelect' => 'required|string',
+            'destinationCountrySelect' => 'required|string',
+            'ArrivalType' => 'required|string',
+            'ContainerType' => 'required|string',
+            'commodity' => 'required|string',
+            'g-recaptcha-response' => 'required|recaptcha'
+        ]);
+
+         // Send email
+        Mail::to(env('MAIL_TO_ADDRESS'))->send(new QuoteFormMail($request));
+
+        return response()->json(['success' => true]);
     }
 }

@@ -13,6 +13,7 @@ Route::get('/article/{id}/{slug}', [PagesController::class, 'article'])->name('a
 
 Route::get('/contact', [PagesController::class, 'contact'])->name('contact');
 Route::get('/quote', [PagesController::class, 'quote'])->name('quote');
+Route::post('/quote', [PagesController::class, 'submitQuote'])->name('submitQuote');
 
 
 Route::get('/about', function () {
