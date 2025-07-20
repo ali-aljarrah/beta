@@ -110,10 +110,14 @@
                         Your logistics, powered by experience, speed, and trust.
                     </p>
                     <div class="d-flex align-items-center">
-                        <i class="fa fa-headphones fa-2x flex-shrink-0 bg-primary rounded-1 p-3 text-white"></i>
+                        <div class="p-3 rounded-1 bg-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#ffffff" class="bi bi-headphones" viewBox="0 0 16 16">
+                                <path d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5"/>
+                            </svg>
+                        </div>
                         <div class="ps-4">
                             <h6>Call for any query!</h6>
-                            <a class="text-primary fw-bold h5" href="tel:+97142322877">+971 4 232 2877</a>
+                            <a class="text-primary fw-bold h5" href="tel:{{App\Models\CompanyInformation::getInfoValue('phone') ?? '#'}}">{{App\Models\CompanyInformation::getInfoValue('phone') ?? '#'}}</a>
                         </div>
                     </div>
                 </div>
@@ -121,20 +125,27 @@
                     <div class="row g-4 align-items-center">
                         <div class="col-sm-6">
                             <div class="bg-dark rounded-1 p-4 mb-4 wow fadeIn" data-wow-delay="0.3s">
-                                <i class="fa fa-users fa-2x text-white mb-3"></i>
-                                <h2 class="text-white mb-2" data-toggle="counter-up">1234</h2>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#ffffff" class="bi bi-people-fill mb-3" viewBox="0 0 16 16">
+                                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+                                </svg>
+                                <h2 class="text-white mb-2" data-toggle="counter-up">20340</h2>
                                 <p class="text-white mb-0">Happy Clients</p>
                             </div>
                             <div class="bg-secondary rounded-1 p-4 wow fadeIn" data-wow-delay="0.5s">
-                                <i class="fa fa-ship fa-2x text-white mb-3"></i>
-                                <h2 class="text-white mb-2" data-toggle="counter-up">1234</h2>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#ffffff" class="bi bi-rocket-fill mb-3" viewBox="0 0 16 16">
+                                    <path d="M10.175 1.991c.81 1.312 1.583 3.43 1.778 6.819l1.5 1.83A2.5 2.5 0 0 1 14 12.202V15.5a.5.5 0 0 1-.9.3l-1.125-1.5c-.166-.222-.42-.4-.752-.57-.214-.108-.414-.192-.627-.282l-.196-.083C9.7 13.793 8.85 14 8 14s-1.7-.207-2.4-.635q-.101.044-.198.084c-.211.089-.411.173-.625.281-.332.17-.586.348-.752.57L2.9 15.8a.5.5 0 0 1-.9-.3v-3.298a2.5 2.5 0 0 1 .548-1.562l.004-.005L4.049 8.81c.197-3.323.969-5.434 1.774-6.756.466-.767.94-1.262 1.31-1.57a3.7 3.7 0 0 1 .601-.41A.55.55 0 0 1 8 0c.101 0 .17.027.25.064q.056.025.145.075c.118.066.277.167.463.315.373.297.85.779 1.317 1.537M9.5 6c0-1.105-.672-2-1.5-2s-1.5.895-1.5 2S7.172 8 8 8s1.5-.895 1.5-2"/>
+                                    <path d="M8 14.5c.5 0 .999-.046 1.479-.139L8.4 15.8a.5.5 0 0 1-.8 0l-1.079-1.439c.48.093.98.139 1.479.139"/>
+                                </svg>
+                                <h2 class="text-white mb-2" data-toggle="counter-up">350</h2>
                                 <p class="text-white mb-0">Complete Shipments</p>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="bg-success rounded-1 p-4 wow fadeIn" data-wow-delay="0.7s">
-                                <i class="fa fa-star fa-2x text-white mb-3"></i>
-                                <h2 class="text-white mb-2" data-toggle="counter-up">1234</h2>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#ffffff" class="bi bi-star-fill mb-3" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                                <h2 class="text-white mb-2" data-toggle="counter-up">871</h2>
                                 <p class="text-white mb-0">Customer Reviews</p>
                             </div>
                         </div>

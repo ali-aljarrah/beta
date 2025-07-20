@@ -61,7 +61,15 @@
                     <h6 class="text-dark text-uppercase mb-3">Our Features</h6>
                     <h1 class="mb-5">We Are Trusted Logistics Company Since 1990</h1>
                     <div class="d-flex mb-5 wow fadeInUp" data-wow-delay="0.3s">
-                        <i class="fa fa-bullseye  text-primary fa-3x flex-shrink-0"></i>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="#d8b768" class="bi bi-bullseye" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                <path d="M8 13A5 5 0 1 1 8 3a5 5 0 0 1 0 10m0 1A6 6 0 1 0 8 2a6 6 0 0 0 0 12"/>
+                                <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8"/>
+                                <path d="M9.5 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+                            </svg>
+                        </div>
+
                         <div class="ms-4">
                             <h5>Our Mission </h5>
                             <p class="mb-0">To offer cost-effective, efficient, reliable, and fully customized logistics solutions tailored
@@ -72,7 +80,12 @@
                         </div>
                     </div>
                     <div class="d-flex mb-5 wow fadeIn" data-wow-delay="0.5s">
-                        <i class="fa fa-eye text-primary fa-3x flex-shrink-0"></i>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="#d8b768" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+                                <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+                            </svg>
+                        </div>
                         <div class="ms-4">
                             <h5>Our Vision</h5>
                             <p class="mb-0">To be a global logistics leader known for excellence, transparency, and innovation in
@@ -120,10 +133,10 @@
     <!-- WHY DO YOU CHOOSE US? End -->
 
     <!-- Team Start -->
-    <div class="container-xxl py-5">
+    <section class="py-5">
         <div class="container py-5">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h2 class="mb-5 h1">Meet our team</h2>
+                <h2 class="mb-3 h1">Meet our team</h2>
                 <p class="mb-5">Our team of highly skilled professionals combines deep industry expertise with the latest
                     technologies and best-in-class resources. This enables us to manage global shipments
                     with precision, consistency, and accountability.
@@ -131,28 +144,34 @@
             </div>
             <div class="row g-4">
                 <div class="col-lg-12 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <h5 class=" mt-5 mb-3">Fadi Saeed Al Abdullah</h5>
-                        <p>Managing Director </p>
-                        <p>Mr. Fadi is the visionary founder behind Beta Logistics FZE, bringing with him a deep 
-                            passion for innovation, quality, and customer-focused solutions. He established the 
-                            company in November 2022 with a clear mission: 
-                        </p>
-                        <p>To deliver excellence in every project. 
-                            Since then, under his leadership, Beta Logistics FZE has evolved from a bold idea into 
-                            a trusted name in the logistics industry, recognized for: </br>
-                            ✅ Reliable, on-time service </br>
-                            ✅ Strong commitment to ethical business values
-                        </p>
-                        <p>Mr. Fadi believes: 
-                            “Success is built on trust, and trust is earned through consistent quality and integrity.” 
-                            His dedication continues to drive the company forward, setting new benchmarks for 
-                            professionalism and customer satisfaction.
-                        </p>
-                        <div class="btn-slide mt-1">
-                            <span>
-                                <a href="https://www.linkedin.com/in/fadi-al-abdullah-15a829201/"><i class="fab fa-linkedin-in fa-25 px-2"></i></a>
-                                <a href="fadi.alabdullah@betafzco.com"><i class="fa fa-envelope fa-25"></i></a>
-                            </span>
+                    <h5 class="ا3 mt-5 mb-3">Fadi Saeed Al Abdullah</h5>
+                    <p>Managing Director </p>
+                    <p>Mr. Fadi is the visionary founder behind Beta Logistics FZE, bringing with him a deep
+                        passion for innovation, quality, and customer-focused solutions. He established the
+                        company in November 2022 with a clear mission:
+                    </p>
+                    <p>To deliver excellence in every project.
+                        Since then, under his leadership, Beta Logistics FZE has evolved from a bold idea into
+                        a trusted name in the logistics industry, recognized for: </br>
+                        ✅ Reliable, on-time service </br>
+                        ✅ Strong commitment to ethical business values
+                    </p>
+                    <p>Mr. Fadi believes:
+                        “Success is built on trust, and trust is earned through consistent quality and integrity.”
+                        His dedication continues to drive the company forward, setting new benchmarks for
+                        professionalism and customer satisfaction.
+                    </p>
+                    <div class="mt-1 d-flex justify-content-start align-items-center">
+                        <a class="d-block me-4" href="https://www.linkedin.com/in/fadi-al-abdullah-15a829201/" target="_blank" rel="noopener noreferrer" aria-label="linkedin">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#000" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                            </svg>
+                        </a>
+                        <a class="d-block me-4" href="mailto:fadi.alabdullah@betafzco.com">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#000" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>

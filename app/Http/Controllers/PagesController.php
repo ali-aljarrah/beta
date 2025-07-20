@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\CareerApplicationMail;
 use App\Mail\ContactMail;
 use App\Mail\QuoteFormMail;
 use App\Models\Article;
@@ -114,5 +115,28 @@ class PagesController extends Controller
         Mail::to(env('MAIL_TO_ADDRESS'))->send(new ContactMail($request));
 
         return response()->json(['success' => true]);
+    }
+
+    public function careers() {
+        return view('careers');
+    }
+
+    public function submitCareers(Request $request) {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'phone' => 'nullable|string|max:20',
+            'ReferenceNo' => 'required|string',
+            'cv' => 'required|file|mimes:pdf|max:2048',
+            'g-recaptcha-response' => 'required|recaptcha'
+        ],
+        [
+            'g-recaptcha-response.required' => 'Prove you are a human!'
+        ]);
+
+        // Send mail
+        Mail::to(env('MAIL_TO_ADDRESS'))->send(new CareerApplicationMail($request));
+
+        return response()->json(['message' => 'Application sent successfully.']);
     }
 }

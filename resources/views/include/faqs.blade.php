@@ -1,10 +1,10 @@
 @if (!empty($faqs) && count($faqs) > 0)
         <section class="py-5">
-            <div class="container">
+            <div class="container wow fadeInUp" data-wow-delay="0.1s">
                 <div class="text-center mb-5">
                     <h2>Frequently Asked Questions (FAQ) - BETA FZE Logistics</h2>
                 </div>
-                <div class="row wow fadeInUp" data-wow-delay="0.1s">
+                <div class="row">
                     <div class="col-lg-10 mx-auto">
                         <div class="accordion" id="faqsAccordion">
                             @foreach ($faqs as $index => $faq)

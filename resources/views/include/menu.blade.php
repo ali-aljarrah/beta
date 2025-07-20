@@ -35,9 +35,9 @@
 
                 <a href="{{route('blog')}}" class="nav-item nav-link {{ request()->is("blog")? "active" : "" }}">Blog</a>
                 <a href="{{route('news')}}" class="nav-item nav-link {{ request()->is("news")? "active" : "" }}">News</a>
-                <a href="/contact" class="nav-item nav-link">Contact</a>
+                <a href="{{route('contact')}}" class="nav-item nav-link {{ request()->is("contact")? "active" : "" }}">Contact</a>
             </div>
-            <a href="/quote" class="btn btn-primary py-md-3 px-md-5 d-flex justify-content-center align-items-center">Free Quote</a>
+            <a href="{{route('quote')}}" class="btn btn-primary py-md-3 px-md-5 d-flex justify-content-center align-items-center">Free Quote</a>
         </div>
     </nav>
     <!-- Navbar End -->

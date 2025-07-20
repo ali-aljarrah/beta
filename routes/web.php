@@ -16,6 +16,10 @@ Route::post('/contact', [PagesController::class, 'submitContact'])->name('submit
 Route::get('/quote', [PagesController::class, 'quote'])->name('quote');
 Route::post('/quote', [PagesController::class, 'submitQuote'])->name('submitQuote');
 
+Route::get('/careers', [PagesController::class, 'careers'])->name('careers');
+Route::post('/careers', [PagesController::class, 'submitCareers'])->name('careers.submit');
+
+
 
 Route::get('/about', function () {
     return view('about');
