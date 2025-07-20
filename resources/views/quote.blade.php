@@ -922,114 +922,114 @@
 
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
-    (function () {
-        'use strict';
+        (function () {
+            'use strict';
 
-        const form = document.getElementById('quoteForm');
+            const form = document.getElementById('quoteForm');
 
-        form.addEventListener('submit', function (event) {
-            event.preventDefault();
-            event.stopPropagation();
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                event.stopPropagation();
 
-            $('#submitBtn').prop("disabled", true);
+                $('#submitBtn').prop("disabled", true);
 
-            const isCountrySelectValid = validateSelect2('countrySelect');
-            const isFreightSelectValid = validateSelect2('FreightSelect');
-            const isoriginCountrySelectValid = validateSelect2('originCountrySelect');
-            const isdeparturetypeSelectValid = validateSelect2('departuretypeSelect');
-            const isdestinationCountrySelectValid = validateSelect2('destinationCountrySelect');
-            const isArrivalTypeValid = validateSelect2('ArrivalType');
-            const isContainerTypeValid = validateSelect2('ContainerType');
+                const isCountrySelectValid = validateSelect2('countrySelect');
+                const isFreightSelectValid = validateSelect2('FreightSelect');
+                const isoriginCountrySelectValid = validateSelect2('originCountrySelect');
+                const isdeparturetypeSelectValid = validateSelect2('departuretypeSelect');
+                const isdestinationCountrySelectValid = validateSelect2('destinationCountrySelect');
+                const isArrivalTypeValid = validateSelect2('ArrivalType');
+                const isContainerTypeValid = validateSelect2('ContainerType');
 
 
-            if (
-                    !form.checkValidity() || !isCountrySelectValid || !isFreightSelectValid
-                    || !isoriginCountrySelectValid || !isdeparturetypeSelectValid || !isdestinationCountrySelectValid
-                    || !isArrivalTypeValid || !isContainerTypeValid
-                )
-            {
-                toastr.error("Please fill up the required fields!");
-                form.classList.add('was-validated');
-                $('#submitBtn').prop("disabled", false);
-                return;
-            }
-
-            const formData = new FormData(form);
-
-            // Replace values with selected option text
-            [
-                'countrySelect',
-                'FreightSelect',
-                'originCountrySelect',
-                'departuretypeSelect',
-                'destinationCountrySelect',
-                'ArrivalType',
-                'ContainerType',
-                'DimensionSizeType',
-                'CargoPacked',
-                'incoterms'
-            ].forEach(id => {
-                const select = document.getElementById(id);
-                if (select && select.selectedIndex >= 0) {
-                    formData.set(id, select.options[select.selectedIndex].text);
+                if (
+                        !form.checkValidity() || !isCountrySelectValid || !isFreightSelectValid
+                        || !isoriginCountrySelectValid || !isdeparturetypeSelectValid || !isdestinationCountrySelectValid
+                        || !isArrivalTypeValid || !isContainerTypeValid
+                    )
+                {
+                    toastr.error("Please fill up the required fields!");
+                    form.classList.add('was-validated');
+                    $('#submitBtn').prop("disabled", false);
+                    return;
                 }
-            });
 
-            // Set checkbox values
-            ['cargoStackable', 'cargoHazardous', 'cargoInsurance'].forEach(id => {
-                const checkbox = document.getElementById(id);
-                formData.set(id, checkbox.checked ? 'Yes' : 'No');
-            });
+                const formData = new FormData(form);
 
-            // Add reCAPTCHA
-            const recaptcha = grecaptcha.getResponse();
-            formData.append('g-recaptcha-response', recaptcha);
-
-
-            $.ajax({
-                url: '{{ route('submitQuote') }}',
-                type: 'POST',
-                data: formData,
-                processData: false, // prevent jQuery from processing data
-                contentType: false, // prevent jQuery from setting content type
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                },
-                success: function (response) {
-                    toastr.success("Quote submitted successfully!");
-                    form.reset();
-                    form.classList.remove('was-validated');
-                    grecaptcha.reset();
-                    $('#submitBtn').prop("disabled", false);
-                },
-                error: function (xhr) {
-                    $('#submitBtn').prop("disabled", false);
-                    if (xhr.status === 422 && xhr.responseJSON?.errors) {
-                        Object.values(xhr.responseJSON.errors).forEach(msgs => {
-                            toastr.error(msgs[0]);
-                        });
-                    } else {
-                        toastr.error("Something went wrong. Please try again.");
+                // Replace values with selected option text
+                [
+                    'countrySelect',
+                    'FreightSelect',
+                    'originCountrySelect',
+                    'departuretypeSelect',
+                    'destinationCountrySelect',
+                    'ArrivalType',
+                    'ContainerType',
+                    'DimensionSizeType',
+                    'CargoPacked',
+                    'incoterms'
+                ].forEach(id => {
+                    const select = document.getElementById(id);
+                    if (select && select.selectedIndex >= 0) {
+                        formData.set(id, select.options[select.selectedIndex].text);
                     }
-                }
-            });
-        }, false);
-    })();
+                });
 
-    function validateSelect2(id) {
-        const el = document.getElementById(id);
-        const container = $(`#${id}`).next('.select2'); // .select2-container
+                // Set checkbox values
+                ['cargoStackable', 'cargoHazardous', 'cargoInsurance'].forEach(id => {
+                    const checkbox = document.getElementById(id);
+                    formData.set(id, checkbox.checked ? 'Yes' : 'No');
+                });
 
-        if (!el.value || el.value === '') {
-            container.addClass('is-invalid');
-            container.removeClass('is-valid');
-            return false;
-        } else {
-            container.removeClass('is-invalid');
-            container.addClass('is-valid');
-            return true;
+                // Add reCAPTCHA
+                const recaptcha = grecaptcha.getResponse();
+                formData.append('g-recaptcha-response', recaptcha);
+
+
+                $.ajax({
+                    url: '{{ route('submitQuote') }}',
+                    type: 'POST',
+                    data: formData,
+                    processData: false, // prevent jQuery from processing data
+                    contentType: false, // prevent jQuery from setting content type
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    success: function (response) {
+                        toastr.success("Quote submitted successfully!");
+                        form.reset();
+                        form.classList.remove('was-validated');
+                        grecaptcha.reset();
+                        $('#submitBtn').prop("disabled", false);
+                    },
+                    error: function (xhr) {
+                        $('#submitBtn').prop("disabled", false);
+                        if (xhr.status === 422 && xhr.responseJSON?.errors) {
+                            Object.values(xhr.responseJSON.errors).forEach(msgs => {
+                                toastr.error(msgs[0]);
+                            });
+                        } else {
+                            toastr.error("Something went wrong. Please try again.");
+                        }
+                    }
+                });
+            }, false);
+        })();
+
+        function validateSelect2(id) {
+            const el = document.getElementById(id);
+            const container = $(`#${id}`).next('.select2'); // .select2-container
+
+            if (!el.value || el.value === '') {
+                container.addClass('is-invalid');
+                container.removeClass('is-valid');
+                return false;
+            } else {
+                container.removeClass('is-invalid');
+                container.addClass('is-valid');
+                return true;
+            }
         }
-    }
     </script>
 </body>
 

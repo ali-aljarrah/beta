@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactMail;
 use App\Mail\QuoteFormMail;
 use App\Models\Article;
 use App\Models\FAQ;
@@ -87,10 +88,30 @@ class PagesController extends Controller
             'ContainerType' => 'required|string',
             'commodity' => 'required|string',
             'g-recaptcha-response' => 'required|recaptcha'
+        ],
+        [
+            'g-recaptcha-response.required' => 'Prove you are a human!'
         ]);
 
          // Send email
         Mail::to(env('MAIL_TO_ADDRESS'))->send(new QuoteFormMail($request));
+
+        return response()->json(['success' => true]);
+    }
+
+     public function submitContact(Request $request) {
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email',
+            'message' => 'required|string',
+            'g-recaptcha-response' => 'required|recaptcha'
+        ],
+        [
+            'g-recaptcha-response.required' => 'Prove you are a human!'
+        ]);
+
+         // Send email
+        Mail::to(env('MAIL_TO_ADDRESS'))->send(new ContactMail($request));
 
         return response()->json(['success' => true]);
     }

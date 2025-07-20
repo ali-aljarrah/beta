@@ -26,6 +26,8 @@ class SupplyChainResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-cube-transparent';
 
+    protected static ?int $navigationSort = 5;
+
     public static function form(Form $form): Form
     {
         return $form

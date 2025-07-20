@@ -12,6 +12,7 @@ Route::get('/blog', [PagesController::class, 'blog'])->name('blog');
 Route::get('/article/{id}/{slug}', [PagesController::class, 'article'])->name('article');
 
 Route::get('/contact', [PagesController::class, 'contact'])->name('contact');
+Route::post('/contact', [PagesController::class, 'submitContact'])->name('submitContact');
 Route::get('/quote', [PagesController::class, 'quote'])->name('quote');
 Route::post('/quote', [PagesController::class, 'submitQuote'])->name('submitQuote');
 
