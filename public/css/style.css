@@ -76,12 +76,15 @@ body {
 
 /*** Navbar ***/
 .navbar .dropdown-toggle::after {
-    border: none;
-    content: "\f107";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
+    content: "";
+    display: inline-block;
     vertical-align: middle;
     margin-left: 8px;
+    width: 10px;
+    height: 10px;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="currentColor" height="10" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><path d="M31.3 192l128 128 128-128H31.3z"/></svg>');
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .navbar-light .navbar-nav .nav-link {
