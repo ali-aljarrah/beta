@@ -58,8 +58,7 @@
         <div class="container feature py-5 px-lg-0">
             <div class="row g-5 mx-lg-0">
                 <div class="col-lg-6 feature-text wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="text-dark text-uppercase mb-3">Our Features</h6>
-                    <h1 class="mb-5">We Are Trusted Logistics Company Since 1990</h1>
+                    <h1 class="mb-5">Beta Logistics established in the year 2022</h1>
                     <div class="d-flex mb-5 wow fadeInUp" data-wow-delay="0.3s">
                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="#d8b768" class="bi bi-bullseye" viewBox="0 0 16 16">
@@ -143,8 +142,13 @@
                 </p>
             </div>
             <div class="row g-4">
-                <div class="col-lg-12 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <h5 class="ا3 mt-5 mb-3">Fadi Saeed Al Abdullah</h5>
+                <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img loading="lazy" width="732" height="548" class="position-absolute img-fluid w-100 h-100 mt-2" src="img/fadi.webp" style="object-fit: cover;" alt="Welcome to Beta Logistics FZE">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 wow fadeInUp px-4" data-wow-delay="0.3s">
+                    <h5 class="mt-2 mb-3">Fadi Saeed Al Abdullah</h5>
                     <p>Managing Director </p>
                     <p>Mr. Fadi is the visionary founder behind Beta Logistics FZE, bringing with him a deep
                         passion for innovation, quality, and customer-focused solutions. He established the
@@ -176,8 +180,72 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- Team End -->
+
+<!-- Client 2 - Bootstrap Brain Component -->
+<section class="py-3 py-md-5 py-xl-8">
+    <div class="container py-5">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h2 class="mb-3 h1">Our Clients</h2>
+        </div>
+    </div>
+    <div class="container overflow-hidden">
+      <div class="row">
+        <div class="col-lg-3 col-md-3 col-xl-3 text-center">
+            <div class="bg-light rounded py-9 px-3">
+                <img class="u-clients img-fluid w-100 h-100 mt-3 mb-3"  loading="lazy" width="132" height="54" src="img/clients/Alexcina.webp" style="object-fit: cover;" alt="Welcome to Beta Logistics FZE">
+            </div>
+            <p class="my-4 fw-medium">
+                Alexcina 
+            </p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-xl-3 text-center">
+            <div class="bg-light rounded py-9 px-3">
+                <img class="img-fluid w-100 h-100 mt-3 mb-3"  loading="lazy" width="132" height="54" src="img/clients/Skywalk.webp" style="object-fit: cover;" alt="Welcome to Beta Logistics FZE">
+            </div>
+            <p class="my-4 fw-medium">
+                Skywalk
+            </p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-xl-3 text-center">
+            <div class="bg-light rounded py-9 px-3">
+                <img class="img-fluid w-100 h-100 mt-3 mb-3"  loading="lazy" width="132" height="30" src="img/clients/Silkway.webp" style="object-fit: cover;" alt="Welcome to Beta Logistics FZE">
+            </div>
+            <p class="my-4 fw-medium">
+                Silkway
+            </p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-xl-3 text-center">
+            <div class="bg-light rounded py-9 px-3">
+                <img class="img-fluid w-100 h-100 mt-3 mb-3"  loading="lazy" width="132" height="54" src="img/clients/sharjah-aviation.webp" style="object-fit: cover;" alt="Welcome to Beta Logistics FZE">
+            </div>
+            <p class="my-4 fw-medium">
+                Sharjah Aviation
+            </p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-xl-3 text-center">
+            <div class="bg-light rounded py-9 px-3">
+                <img class="u-clients img-fluid w-100 h-100 mt-3 mb-3"  loading="lazy" width="132" height="54" src="img/clients/Flyme.webp" style="object-fit: cover;" alt="Welcome to Beta Logistics FZE">
+            </div>
+            <p class="my-4 fw-medium">
+                Flyme
+            </p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-xl-3 text-center">
+            <div class="bg-light rounded py-9 px-3">
+                <img class="u-clients img-fluid w-100 h-100 mt-3 mb-3"  loading="lazy" width="132" height="54" src="img/clients/Camex.webp" style="object-fit: cover;" alt="Welcome to Beta Logistics FZE">
+            </div>
+            <p class="my-4 fw-medium">
+                Camex
+            </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
 
     @include('include.footer')
 </body>
